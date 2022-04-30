@@ -1,5 +1,5 @@
 ############
-#' A Self-made Median Function
+#' BeautifyggPlot
 #'
 #' This function allows you to calculate the median from a numeric vector.
 #' @param x A numeric vector.

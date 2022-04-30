@@ -2,7 +2,7 @@
 % Please edit documentation in R/FUN_Beautify_ggplot.R
 \name{BeautifyggPlot}
 \alias{BeautifyggPlot}
-\title{A Self-made Median Function}
+\title{BeautifyggPlot}
 \usage{
 BeautifyggPlot(
   P1,
