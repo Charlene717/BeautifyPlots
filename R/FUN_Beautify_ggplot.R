@@ -14,7 +14,8 @@ BeautifyggPlot = function( P1,
                            TH= 0.05,TV= -10, TitleSize = 20,
                            XtextSize=17,  YtextSize=17,  XaThick=1.2,  YaThick=1.2, xangle =0,
                            AxisTitleSize=1, AspRat=1,SubTitSize = 15,
-                           OL_Thick = 2.5){
+                           OL_Thick = 2.5, scale_x_cont = seq(0, 1, 0.1), scale_y_cont = seq(0, 10, 0.2)
+){
 
   library(ggplot2)
   library(graphics)
@@ -48,6 +49,19 @@ BeautifyggPlot = function( P1,
     # https://www.cnblogs.com/liujiaxin2018/p/14257944.html
     theme(panel.border = element_rect(fill=NA,color="black", size= OL_Thick, linetype="solid"))
 
+  if(scale_x_cont==0 && scale_y_cont==0){
+    P2 <- P2
+  }else if(scale_y_cont==0 && scale_y_cont==!0){
+    P2 <- P2+scale_x_continuous(breaks=scale_x_cont)
+  }else if(scale_x_cont==0 && scale_x_cont==!0){
+    P2 <- P2+scale_y_continuous(breaks=scale_y_cont)
+  } else{
+    P2 <-  P2+scale_x_continuous(breaks=scale_x_cont)+
+           scale_y_continuous(breaks=scale_y_cont)
+  }
+
+
+
+
   return(P2)
 }
-
