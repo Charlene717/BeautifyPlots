@@ -22,7 +22,9 @@ BeautifyggPlot(
   AxisTitleSize = 1,
   AspRat = 1,
   SubTitSize = 15,
-  OL_Thick = 2.5
+  OL_Thick = 2.5,
+  scale_x_cont = seq(0, 1, 0.1),
+  scale_y_cont = seq(0, 10, 0.2)
 )
 }
 \arguments{
